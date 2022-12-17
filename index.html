@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://unpkg.com/flowbite@1.5.4/dist/flowbite.min.css" />
     <script src="https://unpkg.com/flowbite@1.5.4/dist/flowbite.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
     <title>ZEUS GYM</title>
 </head>
 
@@ -21,18 +22,18 @@
         <a href="#" class="">
             <img src="zeusgym.png" class=" h-[46px]">
         </a>
-        <ul class="text-white flex items-center">
+        <ul class="text-white flex items-center" id="Zeus">
             <li class="flex"><a href="#header"
-                    class="nav-link active h-10 text-[16px] p-2 mr-[1px] hover:text-[#ffffffbf] text-[#ffffff80]">Home</a>
+                    class="active nav-link h-10 text-[16px] p-2 mr-[1px] hover:text-[#ffffffbf] text-[#ffffff80]" id="menu">Home</a>
             </li>
             <li class="flex"><a href="#services"
-                    class="nav-link h-10 text-[16px] hover:text-[#ffffffbf] text-[#ffffff80] p-2 mr-[1px]">Services</a>
+                    class="nav-link h-10 text-[16px] hover:text-[#ffffffbf] text-[#ffffff80] p-2 mr-[1px]" id="menu-bar">Services</a>
             </li>
             <li class="flex"><a href="#about"
-                    class="nav-link h-10 text-[16px] hover:text-[#ffffffbf] text-[#ffffff80] p-2 mr-[1px]">About</a>
+                    class="nav-link h-10 text-[16px] hover:text-[#ffffffbf] text-[#ffffff80] p-2 mr-[1px]" id="menu-item">About</a>
             </li>
             <li class="flex"><a href="#contact"
-                    class="nav-link h-10 text-[16px] hover:text-[#ffffffbf] text-[#ffffff80] p-2">Contact</a></li>
+                    class="nav-link h-10 text-[16px] hover:text-[#ffffffbf] text-[#ffffff80] p-2" id="nav-bar">Contact</a></li>
         </ul>
     </nav>
     <header class="bg-image" id="header">
@@ -45,23 +46,23 @@
     <div class="mt-12 mx-auto px-[15px] w-[1140px]" id="services">
         <h2 class="font-family text-center text-[56px] leading-[67.2px] font-bold mb-4 text-[#212529]">Services We Offer
         </h2>
-        <div class="flex justify-center flex-row w-[1140px] mx-[-15px]">
-            <div class="mx-[15px] border-[#00000020] relative flex flex-col border">
-                <img src="card1.jpg" class="rounded-[3px] h-[260.688px] w-[348px]">
+        <div class="flex justify-center w-[1110px] h-[384px]">
+            <div class="mx-[15px] border-[#00000020] relative flex flex-col w-[340px] border">
+                <img src="card1.jpg" class="rounded-[3px]">
                 <div class="p-5 text-[#212529]">
                     <h4 class="mb-3 text-2xl leading-normal font-bold">Nutrition Advice</h4>
                     <p class="">Duis consectetur tellus lectus. Nunc vitae nisi sed sapien faucibus.</p>
                 </div>
             </div>
-            <div class="mx-[15px] border-[#00000020] relative flex flex-col border">
-                <img src="card2.jpg" class="rounded-[3px] h-[260.688px] w-[348px]">
+            <div class="mx-[15px] border-[#00000020] relative flex flex-col w-[340px] border">
+                <img src="card2.jpg" class="rounded-[3px]">
                 <div class="p-5 text-[#212529]">
                     <h4 class="mb-3 text-2xl leading-normal font-bold">Personal Training</h4>
                     <p class="">Duis consectetur tellus lectus. Nunc vitae nisi sed sapien faucibus.</p>
                 </div>
             </div>
-            <div class="mx-[15px] border-[#00000020] relative flex flex-col border">
-                <img src="card3.jpg" alt="" class="rounded-[3px] h-[260.688px] w-[348px]">
+            <div class="mx-[15px] border-[#00000020] relative flex flex-col w-[340px] border">
+                <img src="card3.jpg" alt="" class="rounded-[3px]">
                 <div class="p-5 text-[#212529]">
                     <h4 class="mb-3 text-2xl leading-normal font-bold">Medical Monitoring</h4>
                     <p class="">Duis consectetur tellus lectus. Nunc vitae nisi sed sapien faucibus.</p>
@@ -265,22 +266,21 @@
                                 </select>
                             </div>
                             <div class="mb-4">
-                                <label for="base-input" maxlength="100" class="inline-block mb-2 text-[14px]">Name*</label>
+                                <label for="base-input" maxlength="100"
+                                    class="inline-block mb-2 text-[14px]">Name*</label>
                                 <input type="text" name="name" id="message"
                                     class="border-[1.01px] text-[14px] border-[#ced4da] text-[#495057] rounded block w-full py-[6px] px-3 transition-select">
                             </div>
                             <div class="mb-4">
-                                <label for="email"
-                                    class="inline-block mb-2 text-[14px]">Email*</label>
+                                <label for="email" class="inline-block mb-2 text-[14px]">Email*</label>
                                 <input type="email" id="email" maxlength="100"
-                                    class="border-[1.01px] text-[14px] border-[#ced4da] text-[#495057] rounded block w-full py-[6px] px-3 transition-select" required>
+                                    class="border-[1.01px] text-[14px] border-[#ced4da] text-[#495057] rounded block w-full py-[6px] px-3 transition-select"
+                                    required>
                             </div>
                             <div class="mb-4">
-                                <label for="message"
-                                    class="inline-block mb-2 text-[14px]">Message*</label>
+                                <label for="message" class="inline-block mb-2 text-[14px]">Message*</label>
                                 <textarea id="message" rows="5" maxlength="500"
-                                    class="border-[1.01px] text-[14px] border-[#ced4da] text-[#495057] rounded block w-full py-[6px] px-3 transition-select"
-                                    ></textarea>
+                                    class="border-[1.01px] text-[14px] border-[#ced4da] text-[#495057] rounded block w-full py-[6px] px-3 transition-select"></textarea>
                             </div>
                             <div class="mb-4">
                                 <button type="button"
@@ -293,7 +293,7 @@
         </div>
     </div>
     <div id="newsletter" class="bg-[#101010] py-6 text-[#f8f9fa]">
-         <div class="w-[1140px] px-[15px] mx-auto">
+        <div class="w-[1140px] px-[15px] mx-auto">
             <div class="flex flex-wrap flex-row margin-y">
                 <div class="flex items-center px-[15px] relative w-[570px] min-h-[1px]">
                     <h2 class="mb-4 font-family text-center text-[56px] leading-[67.2px] ">Consider Subscribing?</h2>
@@ -303,29 +303,78 @@
                         <div class="mb-4">
                             <label for="id_email" class="inline-block mb-2 text-[14px]">Email*</label>
                             <input type="text" name="name" id="message"
-                                    class="border-[1.01px] text-[14px] border-[#ced4da] text-[#495057] rounded block w-full py-[6px] px-3 transition-select">
+                                class="border-[1.01px] text-[14px] border-[#ced4da] text-[#495057] rounded block w-full py-[6px] px-3 transition-select">
                         </div>
-                            <button type="button"
-                                class="bg-[red] text-[#f8f9fa] w-full block border-[1.01px] hover:border-[#dc3545] hover:bg-[#c82333] rounded border-transparent text-[14px] py-[6px] px-3 transition-select">Submit</button>
+                        <button type="button"
+                            class="bg-[red] text-[#f8f9fa] w-full block border-[1.01px] hover:border-[#dc3545] hover:bg-[#c82333] rounded border-transparent text-[14px] py-[6px] px-3 transition-select">Submit</button>
                     </form>
                 </div>
             </div>
-         </div>
+        </div>
     </div>
     <footer class="bg-black text-[#f8f9fa]">
         <div class="py-4 text-center text-[14.5px]">© 2021 Copyright @</div>
     </footer>
 </body>
 <script>
-    document.querySelectorAll(".nav-link").forEach((ele) =>
-        ele.addEventListener("click", function (event) {
-            event.preventDefault();
-            document
-                .querySelectorAll(".nav-link")
-                .forEach((ele) => ele.classList.remove("active"));
-            this.classList.add("active")
+    $(document).ready(function(){
+        $(".nav-link").click(function(){
+            $(".nav-link").removeClass("active");
+            $(this).addClass("active");
         })
-    );
+    });
+
+    window.addEventListener('scroll',function(){
+        
+        let navbar = document.getElementById('menu');
+
+        if(window.pageYOffset >= 306.25){
+            navbar.classList.remove("active")
+        }else {
+            navbar.classList.add("active")
+        }
+    });
+
+    window.addEventListener('scroll',function(){
+        
+        let navbar = document.getElementById('menu-bar');
+
+        if(window.pageYOffset >= 306.25){
+            navbar.classList.add("active")
+        }else {
+            navbar.classList.remove("active")
+        }
+
+        if(window.pageYOffset >= 773.44){
+            navbar.classList.remove("active")
+        }
+    });
+
+    window.addEventListener('scroll',function(){
+        
+        let navbar = document.getElementById('menu-item');
+
+        if(window.pageYOffset >= 773.44){
+            navbar.classList.add("active")
+        }else {
+            navbar.classList.remove("active")
+        }
+
+        if(window.pageYOffset >= 1716.63){
+            navbar.classList.remove("active")
+        }
+    });
+
+    window.addEventListener('scroll',function(){
+        
+        let navbar = document.getElementById('nav-bar');
+
+        if(window.pageYOffset >= 1716.63){
+            navbar.classList.add("active")
+        }else {
+            navbar.classList.remove("active")
+        }
+    });
 </script>
 
 </html>

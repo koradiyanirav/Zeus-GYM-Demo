@@ -4,6 +4,10 @@
   font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
 }
 
+body{
+  scroll-behavior: smooth;
+}
+
 .bg-image {
   background-image: url(bggym.jpg);
   background-position: center;
@@ -33,6 +37,7 @@
   color: #ffffff!important; 
   background-color: #dc3545;
   border-radius: 4px;
+  scroll-behavior: smooth;
 }
 
 .bg-about {
